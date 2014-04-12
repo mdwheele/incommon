@@ -1,0 +1,24 @@
+{
+    "name": "mdwheele/incommon",
+    "description": "PHP Client for InCommon Certificate Manager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dustin Wheeler",
+            "email": "mdwheele@ncsu.edu"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+        "php-vcr/php-vcr": "1.*",
+        "php-vcr/phpunit-testlistener-vcr": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "InCommon\\": "src/",
+            "InCommon\\Tests\\": "tests/"
+        }
+    }
+}
