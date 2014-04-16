@@ -15,11 +15,16 @@ class Client extends \SoapClient
      */
     const VERSION = '1.4';
 
-    /**
-     *
-     */
-    public function __construct()
+    public function __construct(array $classmap)
     {
-        parent::__construct(Client::BASE_URL);
+        parent::__construct(Client::BASE_URL, array('classmap' => $classmap));
+    }
+
+    public static function create()
+    {
+        $classMapper = new ClassMapper();
+        $client = new Client($classMapper->toArray());
+
+        return $client;
     }
 } 

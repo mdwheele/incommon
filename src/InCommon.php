@@ -9,20 +9,21 @@ namespace InCommon;
 class InCommon 
 {
     /**
-     * @var Client
-     */
-    protected $client;
-    /**
      * @var array
      */
     protected $apis = array();
+
+    /**
+     * @var Client
+     */
+    protected $client;
 
     /**
      * Create a new Client.
      */
     public function __construct()
     {
-        $this->client = new Client();
+        $this->client = Client::create();
     }
 
     /**
@@ -68,11 +69,11 @@ class InCommon
     {
         $class = "\\" . __NAMESPACE__ . "\\Api\\" . $class;
 
-        if( ! class_exists($class)) {
-            throw new InCommonException(sprintf('Class %s does not exist.', $class));
+        if ( ! class_exists($class)) {
+            throw new InCommonException(sprintf('%s API handler does not exist.', $class));
         }
 
-        if( ! array_key_exists($class, $this->apis)) {
+        if ( ! array_key_exists($class, $this->apis)) {
             $this->apis[$class] = new $class($this->client);
         }
 

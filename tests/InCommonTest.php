@@ -16,4 +16,20 @@ class InCommonTest extends \PHPUnit_Framework_TestCase
         $incommon = new InCommon();
         $incommon->broke;
     }
+
+    /** @test */
+    function it_returns_correct_api_when_property_is_accessed()
+    {
+        $incommon = new InCommon();
+
+        $this->assertInstanceOf('InCommon\Api\AbstractApi', $incommon->certs);
+    }
+
+    /** @test */
+    function it_returns_client()
+    {
+        $incommon = new InCommon();
+
+        $this->assertInstanceOf('SoapClient', $incommon->getClient());
+    }
 } 

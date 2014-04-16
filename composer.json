@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-
+        "symfony/finder": "2.5.*"
     },
     "require-dev": {
         "php-vcr/php-vcr": "1.*",
