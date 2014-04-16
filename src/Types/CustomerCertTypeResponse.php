@@ -24,8 +24,14 @@ class CustomerCertTypeResponse extends AbstractResponse
     const UNKNOWN_ERROR_OCCURED = -14;
     const PERMISSION_DENIED = -16;
 
+    /**
+     * @var CustomerCertType[]
+     */
     private $types;
 
+    /**
+     * @return CustomerCertType[]
+     */
     public function getTypes()
     {
         return $this->types;
