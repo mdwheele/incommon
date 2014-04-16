@@ -39,7 +39,7 @@ class AuthData
 
     /**
      * URI for logging into account within CM.
-     * 
+     *
      * @var string
      */
     private $customerLoginUri;
