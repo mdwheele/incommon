@@ -2,11 +2,10 @@
 
 namespace InCommon;
 
-
 /**
  * @property Api\Certs $certs
  */
-class InCommon 
+class InCommon
 {
     /**
      * @var array
@@ -79,4 +78,4 @@ class InCommon
 
         return $this->apis[$class];
     }
-} 
+}

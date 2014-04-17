@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * Class representing a server type.
@@ -8,7 +8,7 @@ namespace InCommon\Types;
  * @see Section 2.3.1.2 of API documentation.
  * @author Dustin Wheeler <mdwheele@ncsu.edu>
  */
-class ServerType 
+class ServerType
 {
     const AOL = 1;
     const APACHE_MODSSL = 2;
@@ -45,4 +45,4 @@ class ServerType
     const WHM_CPANEL = 31;
     const HSPHERE = 32;
     const OTHER = -1;
-} 
+}

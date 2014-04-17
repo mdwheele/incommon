@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * Class representing SOAP service abstractResponse complex type.
@@ -28,4 +28,4 @@ abstract class AbstractResponse
     {
         return $this->statusCode;
     }
-} 
+}

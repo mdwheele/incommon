@@ -14,4 +14,4 @@ require_once __DIR__ . '/../vendor/autoload.php';
 \VCR\VCR::configure()
     ->setCassettePath(__DIR__ . '/fixtures');
 
-\VCR\VCR::turnOn();
+#\VCR\VCR::turnOn();

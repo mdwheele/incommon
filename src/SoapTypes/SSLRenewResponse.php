@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * A custom type representing the SSLRenewResponse from the collectRenewed
@@ -17,7 +17,7 @@ namespace InCommon\Types;
  * @see Section 2.2.2 of API documentation.
  * @author Dustin Wheeler <mdwheele@ncsu.edu>
  */
-class SSLRenewResponse 
+class SSLRenewResponse
 {
     const ISSUED_OK = 0;
     const APPLIED = -1;
@@ -73,5 +73,5 @@ class SSLRenewResponse
     {
         return $this->errorCode;
     }
-    
-} 
+
+}

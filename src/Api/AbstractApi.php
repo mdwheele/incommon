@@ -2,7 +2,6 @@
 
 namespace InCommon\Api;
 
-
 abstract class AbstractApi
 {
     protected $client;
@@ -19,4 +18,4 @@ abstract class AbstractApi
     {
         return $this->client;
     }
-} 
+}

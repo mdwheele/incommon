@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * Class representation of SSL complex type.
@@ -14,7 +14,7 @@ namespace InCommon\Types;
  *
  * @author Dustin Wheeler <mdwheele@ncsu.edu>
  */
-class SSL 
+class SSL
 {
     /**
      * The certificate in base64
@@ -47,4 +47,4 @@ class SSL
         return $this->renewID;
     }
 
-} 
+}

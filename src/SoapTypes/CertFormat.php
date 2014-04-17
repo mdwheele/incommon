@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * Helper class representing cert format types to be used in collection
@@ -15,4 +15,4 @@ class CertFormat
     const X509_PEM_INTERMEDIATE_CERTIFICATE_ONLY = 2;
     const PKCS7_PEM_BUNDLE = 3;
     const PKCS7_DER_BUNDLE = 4;
-} 
+}

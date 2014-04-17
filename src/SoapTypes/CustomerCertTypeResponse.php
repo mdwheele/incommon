@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * Class representing the customerCertTypeResponse from SOAP service.
@@ -36,4 +36,4 @@ class CustomerCertTypeResponse extends AbstractResponse
     {
         return $this->types;
     }
-} 
+}

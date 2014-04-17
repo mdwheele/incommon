@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * Class representing a customer certificate type.
@@ -16,7 +16,7 @@ namespace InCommon\Types;
  * @see Section 2.7.2.1 of API Documentation.
  * @author Dustin Wheeler <mdwheele@ncsu.edu>
  */
-class CustomerCertType 
+class CustomerCertType
 {
     /**
      * The service customer cert type identifier.
@@ -60,4 +60,4 @@ class CustomerCertType
         return $this->terms;
     }
 
-} 
+}

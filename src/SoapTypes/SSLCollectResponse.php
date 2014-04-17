@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * Class representing SSLCollectResponse SOAP complex type.
@@ -44,4 +44,4 @@ class SSLCollectResponse extends AbstractResponse
     {
         return $this->SSL;
     }
-} 
+}

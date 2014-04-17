@@ -1,6 +1,6 @@
 <?php
 
-namespace InCommon\Types;
+namespace InCommon\SoapTypes;
 
 /**
  * A custom type representing the authData type.
@@ -15,7 +15,7 @@ namespace InCommon\Types;
  *
  * @author Dustin Wheeler <mdwheele@ncsu.edu>
  */
-class AuthData 
+class AuthData
 {
     /**
      * Login name for account within CM.
@@ -92,4 +92,4 @@ class AuthData
         return $this->password;
     }
 
-} 
+}

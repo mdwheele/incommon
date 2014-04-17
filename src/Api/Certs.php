@@ -2,9 +2,8 @@
 
 namespace InCommon\Api;
 
-
 use InCommon\Types\AuthData;
-use InCommon\Types\CertFormat;
+use InCommon\Types\CustomerCertType;
 
 /**
  * Class representing the InCommon CM SSL Web Service API.
@@ -18,12 +17,12 @@ class Certs extends AbstractApi
 {
     public function renew($renewId)
     {
-
+        throw new NotImplementedException();
     }
 
-    public function collectRenewed($renewId, CertFormat $formatType)
+    public function collectRenewed($renewId, $formatType)
     {
-
+        throw new NotImplementedException();
     }
 
     public function enroll(
@@ -32,9 +31,30 @@ class Certs extends AbstractApi
         $secretKey,
         $csrData,
         $phrase,
-        $subjAltNames
+        $subjAltNames,
+        CustomerCertType $certType,
+        $numberServers,
+        $serverType,
+        $term,
+        $comments
     )
     {
-        
+        throw new NotImplementedException();
     }
-} 
+
+    public function getCollectStatus(AuthData $authData, $sslId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public function collect(AuthData $authData, $sslId, $formatType)
+    {
+        throw new NotImplementedException();
+    }
+
+    public function revoke(AuthData $authData, $sslId, $reason)
+    {
+        throw new NotImplementedException();
+    }
+
+}

@@ -2,7 +2,6 @@
 
 namespace InCommon;
 
-
 class Client extends \SoapClient
 {
     /**
@@ -27,4 +26,4 @@ class Client extends \SoapClient
 
         return $client;
     }
-} 
+}
