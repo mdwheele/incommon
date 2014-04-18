@@ -16,7 +16,7 @@ class Client extends \SoapClient
 
     public function __construct(array $classmap)
     {
-        parent::__construct(Client::BASE_URL, array('classmap' => $classmap));
+        parent::__construct(Client::BASE_URL, array('classmap' => $classmap, 'trace' => true));
     }
 
     public static function create()

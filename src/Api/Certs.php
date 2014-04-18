@@ -2,8 +2,11 @@
 
 namespace InCommon\Api;
 
-use InCommon\Types\AuthData;
-use InCommon\Types\CustomerCertType;
+use InCommon\SoapTypes\collect;
+use InCommon\SoapTypes\getCollectStatus;
+use InCommon\SoapTypes\enroll;
+use InCommon\SoapTypes\getCustomerCertTypes;
+use InCommon\SoapTypes\authData as AuthData;
 
 /**
  * Class representing the InCommon CM SSL Web Service API.
@@ -15,46 +18,55 @@ use InCommon\Types\CustomerCertType;
  */
 class Certs extends AbstractApi
 {
-    public function renew($renewId)
+    public function getCustomerCertTypes(AuthData $authData)
     {
-        throw new NotImplementedException();
-    }
+        $response = $this->client->getCustomerCertTypes(new getCustomerCertTypes($authData));
 
-    public function collectRenewed($renewId, $formatType)
-    {
-        throw new NotImplementedException();
+        return $response->return;
     }
 
     public function enroll(
-        AuthData $authData,
+        $authData,
         $orgId,
         $secretKey,
         $csrData,
         $phrase,
         $subjAltNames,
-        CustomerCertType $certType,
+        $certType,
         $numberServers,
         $serverType,
         $term,
         $comments
     )
     {
-        throw new NotImplementedException();
+        $response = $this->client->enroll(new enroll(
+            $authData,
+            $orgId,
+            $secretKey,
+            $csrData,
+            $phrase,
+            $subjAltNames,
+            $certType,
+            $numberServers,
+            $serverType,
+            $term,
+            $comments)
+        );
+
+        return $response->return;
     }
 
-    public function getCollectStatus(AuthData $authData, $sslId)
+    public function checkStatus($authData, $sslId)
     {
-        throw new NotImplementedException();
+        $response = $this->client->getCollectStatus(new getCollectStatus($authData, $sslId));
+
+        return $response->return;
     }
 
-    public function collect(AuthData $authData, $sslId, $formatType)
+    public function collect($authData, $sslId, $formatType)
     {
-        throw new NotImplementedException();
-    }
+        $response = $this->client->collect(new collect($authData, $sslId, $formatType));
 
-    public function revoke(AuthData $authData, $sslId, $reason)
-    {
-        throw new NotImplementedException();
+        return $response->return;
     }
-
 }
