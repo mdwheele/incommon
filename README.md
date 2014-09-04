@@ -9,7 +9,7 @@ PHP Client for InCommon Certificate Manager SSL Web Service API
 
 __Notice: This an alpha-quality software at the moment. Do NOT use in production anything!!__
 
-This client provides an abstracted access layer on top of the InCommon Certificate Manager SSL SOAP Web ]
+This client provides an abstracted access layer on top of the InCommon Certificate Manager SSL SOAP Web
 Service.
 
 ## Goals
